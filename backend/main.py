@@ -14,7 +14,7 @@ except ImportError:
 
 # Groq API key – replace with your key from https://console.groq.com/keys
 # WARNING: Do not commit real keys to public repositories
-GROQ_API_KEY_HARDCODED = "YOUR_GROQ_API_KEY_HERE"
+GROQ_API_KEY_HARDCODED = "YOUR_API_KEY_HERE"
 
 app = FastAPI(title="PharmaGuide Backend", version="1.0.0")
 
