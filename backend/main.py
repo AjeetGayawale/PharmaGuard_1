@@ -27,7 +27,7 @@ except ImportError:
 
 # Groq API key – replace with your key from https://console.groq.com/keys
 # WARNING: Do not commit real keys to public repositories
-GROQ_API_KEY = "YOUR_API_KEY_HERE"
+GROQ_API_KEY_HARDCODED = "YOUR_API_KEY_HERE"
 
 app = FastAPI(title="PharmaGuide Backend", version="1.0.0")
 
@@ -619,9 +619,3 @@ async def analyze(
 @app.get("/health")
 def health() -> Dict[str, str]:
     return {"status": "ok"}
-
-@app.get("/llm-status")
-def llm_status():
-    if GROQ_API_KEY:
-        return {"status": "LLM key loaded"}
-    return {"status": "LLM key NOT loaded"}
